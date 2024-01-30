@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>ChatLive</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="minegri.css">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+    </style>
+    <script defer src="http://localhost:80/socket.io/socket.io.js"></script>
+    <script defer src="client.js"></script>
+    <script>
+    // Import the functions you need from the SDKs you need
+    
+/*
+      if (nombre.trim() === "") {
+       ver Swal.fire({
+          icon: 'error',
+          title: 'Campo vacio...',
+          text: 'Asegurate de haber escrito tu comentario!'
+        })
+        return;      
+      };
+
+     
+        Swal.fire(
+          'Enviado!',
+          '¡Pronto responderé negri!',
+          'success'
+        );
+
+
+    });
+  */
+</script>
+</head>
+<body id="todito">
+    <div id="partesuperior">
+        <img id="fotonosotros" src="nosotros.jpg">
+        <p id="privado">Chat privado</p>
+    </div>
+    <div id="chat">
+        <form  action="" id="send-container">
+          <input type="text" id="message-input" name="nombre" placeholder="Ingresa tu mensaje"><br><br>
+          <!-- <button type="submit" id="send-button">Enviar</button> -->
+        </form>
+    </div>
+    <div id="message-container"></div>  
+</body>
+</html>
