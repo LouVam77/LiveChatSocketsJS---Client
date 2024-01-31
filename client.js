@@ -1,4 +1,5 @@
-const socket = io('http://localhost:80/')
+const io = ('https://livechat-3v7l.onrender.com');
+const socket = io
 const messageContainer = document.getElementById('message-container')
 const messageForm = document.getElementById('send-container')
 const messageInput = document.getElementById('message-input')
@@ -12,12 +13,12 @@ socket.on('chat-message', data => {
     messageContainer.scrollTop = messageContainer.scrollHeight
 })
 
-socket.on('user-connected', name => {
+socket.on('user-connect', name => {
     appendMessage(`${name} connected`)
     messageContainer.scrollTop = messageContainer.scrollHeight
 })
 
-socket.on('user-disconnected', name => {
+socket.on('user-disconnect', name => {
     appendMessage(`${name} disconnected`)
     messageContainer.scrollTop = messageContainer.scrollHeight
 })
@@ -25,14 +26,8 @@ socket.on('user-disconnected', name => {
 messageForm.addEventListener('submit', e => {
     e.preventDefault()
     const message = messageInput.value
-    appendMessage(`You: ${message}`)
-    socket.emit('send-chat-message', message)
-    messageContainer.scrollTop = messageContainer.scrollHeight
+    const newMessage = document.createElement('li');
+    newMessage.innerText = message
+    messageContainer.appendChild(newMessage);
     messageInput.value = ''     
 })
-
-function appendMessage(message) {
-    const messageElement = document.createElement('div')
-    messageElement.innerText = message
-    messageContainer.append(messageElement)
-}
