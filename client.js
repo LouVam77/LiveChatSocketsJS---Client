@@ -23,11 +23,16 @@ socket.on('user-disconnect', name => {
     messageContainer.scrollTop = messageContainer.scrollHeight
 })
 
+function appendMessage(message) {
+    const messageElement = document.createElement('div');
+    messageElement.innerText = message;
+    messageDisplay.appendChild(messageElement);
+}
+
 messageForm.addEventListener('submit', e => {
-    e.preventDefault()
-    const message = messageInput.value
-    const newMessage = document.createElement('li');
-    newMessage.innerText = message
-    messageContainer.appendChild(newMessage);
-    messageInput.value = ''     
-})
+    e.preventDefault();
+    const message = messageInput.value;
+    appendMessage(`You: ${message}`); 
+    socket.emit('send-chat-message', message);
+    messageInput.value = '';
+});
