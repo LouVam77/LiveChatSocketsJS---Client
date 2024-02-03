@@ -5,12 +5,14 @@
     <meta charset="utf-8">
     <title>ChatLive</title>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="minegri.css">
+    <link rel="stylesheet" href="client.css">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
     </style>
-    <script defer type="application/javascript" src="https://livechat-3v7l.onrender.com/socket.io/socket.io.js"></script>
-    <script src="client.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.2/socket.io.js"></script>
+    <!-- <script defer type="application/javascript" src="https://livechat-3v7l.onrender.com/socket.io/socket.io.js"></script> -->
+
+    <script defer src="client.js"></script>
     <script>
     // Import the functions you need from the SDKs you need
     
@@ -42,11 +44,10 @@
         <p id="privado">Chat privado</p>
     </div>
     <div id="chat">
-        <form  action="" id="send-container">
-          <input type="text" id="message-input">
-          <button type="submit">Enviar</button>
+    <div id="message-container"></div>
+        <form id="message-form">
+          <input type="text" id="message-input" placeholder="Write a message" >
         </form>
     </div>
-    <div id="message-container"></div>  
 </body>
 </html>

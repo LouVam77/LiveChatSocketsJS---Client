@@ -1,20 +1,29 @@
 const io = ('https://livechat-3v7l.onrender.com');
 const socket = io
+
 const messageContainer = document.getElementById('message-container')
-const messageForm = document.getElementById('send-container')
+const messageForm = document.getElementById('message-form')
 const messageInput = document.getElementById('message-input')
 
-const Name = prompt('What is your name?')
+const username = prompt('What is your name?')
 appendMessage('You joined')
-socket.emit('new-user', Name)
+socket.emit('new-user', username)
+
+messageForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const message = messageInput.value;
+    appendMessage(`You: ${message}`,'You'); 
+    socket.emit('send-chat-message', message);
+    messageInput.value = '';
+});
 
 socket.on('chat-message', data => {
-    appendMessage(`${data.name}: ${data.message}`)
+    appendMessage(`${data.name}: ${data.message}`, 'Other')
     messageContainer.scrollTop = messageContainer.scrollHeight
 })
 
-socket.on('user-connect', name => {
-    appendMessage(`${name} connected`)
+socket.on('user-connect', username => {
+    appendMessage(`${username} connected`)
     messageContainer.scrollTop = messageContainer.scrollHeight
 })
 
@@ -23,11 +32,13 @@ socket.on('user-disconnect', name => {
     messageContainer.scrollTop = messageContainer.scrollHeight
 })
 
-messageForm.addEventListener('submit', e => {
-    e.preventDefault()
-    const message = messageInput.value
-    const newMessage = document.createElement('li');
-    newMessage.innerText = message
-    messageContainer.appendChild(newMessage);
-    messageInput.value = ''     
-})
+function appendMessage(message, source) {
+    const messageElement = document.createElement('div');
+    messageElement.innerText = message;
+    if (source === 'You') {
+        messageElement.classList.add('sent-message');
+    } else {
+        messageElement.classList.add('received-message');
+    }
+    messageContainer.appendChild(messageElement);
+}
