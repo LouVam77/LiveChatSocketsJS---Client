@@ -1,10 +1,16 @@
 const io = ('https://livechat-3v7l.onrender.com');
-const socket = io
+const socket = io('http://localhost:3000', {
+  cors: {
+    origin: '*',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Access-Control-Allow-Origin', 'Content-Type'],
+    credentials: true
+  }
+});
 
 const messageContainer = document.getElementById('message-container')
 const messageForm = document.getElementById('message-form')
 const messageInput = document.getElementById('message-input')
-const messageDisplay = document.getElementById('message-display');
 
 const username = prompt('What is your name?')
 appendMessage('You joined')
@@ -33,7 +39,6 @@ socket.on('user-disconnect', name => {
     messageContainer.scrollTop = messageContainer.scrollHeight
 })
 
-<<<<<<< HEAD
 function appendMessage(message, source) {
     const messageElement = document.createElement('div');
     messageElement.innerText = message;
@@ -44,18 +49,3 @@ function appendMessage(message, source) {
     }
     messageContainer.appendChild(messageElement);
 }
-=======
-function appendMessage(message) {
-    const messageElement = document.createElement('div');
-    messageElement.innerText = message;
-    messageDisplay.appendChild(messageElement);
-}
-
-messageForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const message = messageInput.value;
-    appendMessage(`You: ${message}`); 
-    socket.emit('send-chat-message', message);
-    messageInput.value = '';
-});
->>>>>>> b9aa9fe457bdda4ba4cd2e5faa91fb3ace665237
