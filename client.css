@@ -66,7 +66,7 @@ input {
   align-items: center;
 }
 
-#privado, #fotonosotros {
+#privado {
   display: inline-block;
   padding: 0;
   color: white;
@@ -78,14 +78,8 @@ input {
   font-size: 20px;
 }
 
-
-#fotonosotros {
-  border-radius: 50%;
-  width: 50px;
-}
-
 #todito {
-  background-image: url('flores1.gif');
+  background-color: black;
   background-size: 100%;
   background-repeat: no-repeat;
   background-size: cover;
