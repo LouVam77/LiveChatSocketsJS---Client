@@ -1,5 +1,11 @@
-const io = required('https://livechat-3v7l.onrender.com');
-const socket = io
+const socket = io('https://livechat-3v7l.onrender.com', {
+  cors: {
+    origin: '*',
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Access-Control-Allow-Origin', 'Content-Type'],
+    credentials: true
+  }
+});
 
 const messageContainer = document.getElementById('message-container')
 const messageForm = document.getElementById('message-form')
