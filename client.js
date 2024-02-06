@@ -1,4 +1,4 @@
-const socket = io('https://livechat-3v7l.onrender.com', {
+const socket = io('https://live-chat-server.up.railway.app', {
   cors: {
     origin: '*',
     methods: ['GET', 'POST'],
