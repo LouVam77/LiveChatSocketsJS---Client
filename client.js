@@ -29,12 +29,12 @@ socket.on('chat-message', data => {
 })
 
 socket.on('user-connect', username => {
-    appendMessage(`${username} connected`)
+    appendMessage(`${username} connected`, 'Other')
     messageContainer.scrollTop = messageContainer.scrollHeight
 })
 
 socket.on('user-disconnect', name => {
-    appendMessage(`${name} disconnected`)
+    appendMessage(`${name} disconnected`, 'Other')
     messageContainer.scrollTop = messageContainer.scrollHeight
 })
 
