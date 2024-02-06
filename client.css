@@ -6,3 +6,89 @@
   text-align: left;
 }
 
+#message-container {
+  width: 90%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+}
+
+#message-container div {
+  background-color: #f0f0f0;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  margin-right: 10%;
+}
+
+
+@media screen and (max-width: 767px) {
+  #message-container div {
+    margin-right: 10%;
+  }
+}
+
+
+#message-container div p {
+  margin: 0;
+}
+
+input {
+    width: 120px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#chat {
+  width: 100%;
+  justify-content: center;
+  justify-self: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+
+}
+
+#partesuperior {
+  background-color: rgba(0, 0, 0, 0.26);
+  margin-top: -8px;
+  margin-left: -10px;
+  margin-right: -10px;
+  width: 110%;
+  height: 60px;
+  color: blue;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+#privado, #fotonosotros {
+  display: inline-block;
+  padding: 0;
+  color: white;
+  margin-left: 20px;
+}
+
+#privado {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+}
+
+
+#fotonosotros {
+  border-radius: 50%;
+  width: 50px;
+}
+
+#todito {
+  background-image: url('flores1.gif');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; /* Fija el fondo */
+}
+
