@@ -1,11 +1,4 @@
-const socket = io('https://live-chat-server.up.railway.app', {
-  cors: {
-    origin: '*',
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Access-Control-Allow-Origin', 'Content-Type'],
-    credentials: true
-  }
-});
+const socket = io('https://live-chat-server.up.railway.app')
 
 const messageContainer = document.getElementById('message-container')
 const messageForm = document.getElementById('message-form')
