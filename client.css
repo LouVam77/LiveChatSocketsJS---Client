@@ -17,14 +17,6 @@
 }
 
 #message-container {
-  width: 80%; /* O el ancho deseado */
-  height: 50%; /* O la altura deseada */
-  display: flex;
-  margin: 0;
-  flex-direction: column; /* Alinear los hijos uno debajo del otro */
-}
-
-#message-container {
   width: 90%;
   list-style: none;
   padding: 0;
