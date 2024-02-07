@@ -8,9 +8,8 @@
     padding: 10px;
     border-radius: 5px;
     max-width: 80%;
-    position: relative;
-    left: 0;
-    transition: left 0.3s ease-in-out;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
 .received-message.show {
@@ -18,11 +17,15 @@
 }
 
 #message-container {
+  background-color: blue;
   width: 90%;
   list-style: none;
-  padding: 0;
+  padding: 10px;
   margin: 0;
   margin-top: 40px;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
 }
 
 #message-container div {
