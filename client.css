@@ -3,7 +3,17 @@
 }
 
 .received-message {
-  text-align: left;
+    background-color: #e0e0e0;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 80%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.received-message.show {
+    opacity: 1;
 }
 
 #message-container {
