@@ -30,7 +30,6 @@
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 10px;
-  width: auto; /* Ajustar al contenido */
   display: block; /* Cada div en una línea nueva */
 }
 
