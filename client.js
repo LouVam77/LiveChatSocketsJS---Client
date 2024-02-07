@@ -24,7 +24,7 @@ messageForm.addEventListener('submit', e => {
 });
 
 socket.on('chat-message', data => {
-    appendMessage(`${data.name}: ${data.message}`, 'Other')
+    appendMessage(`${data.name}: ${data.message}`)
     messageContainer.scrollTop = messageContainer.scrollHeight
 })
 
