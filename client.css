@@ -44,6 +44,21 @@ input {
   width: 40%;
   justify-self: center;
   margin-top: 40px;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  color: #333;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.message-input:focus {
+  border-color: #66afe9;
+}
+
+.message-input::placeholder {
+  color: #aaa;
 }
 
 #chat {
