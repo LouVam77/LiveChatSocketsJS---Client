@@ -1,5 +1,6 @@
 .sent-message {
   float: right;
+  margin-left: 50%;
 }
 
 .received-message {
