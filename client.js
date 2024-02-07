@@ -51,7 +51,7 @@ function appendMessage(message, source) {
         messageElement.classList.add('show');
    }, 100)
     
-    while (messageContainer.childNodes.length == 3) {
+    while (messageContainer.childNodes.length == 5) {
         messageContainer.removeChild(messageContainer.childNodes[messageContainer.childNodes.length - 1]);
     }
 
