@@ -65,6 +65,7 @@ input {
   width: 100%; /* O el ancho deseado */
   height: 100vh; /* Utiliza la altura completa de la ventana */
   display: flex;
+  flex-direction: column;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
 }
