@@ -8,8 +8,9 @@
     padding: 10px;
     border-radius: 5px;
     max-width: 80%;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    position: relative;
+    left: 0;
+    transition: left 0.3s ease-in-out;
 }
 
 .received-message.show {
