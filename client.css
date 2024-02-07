@@ -41,12 +41,15 @@
 }
 
 input {
-    width: 40%;
+  width: 40%;
+  justify-self: center;
+  margin-top: 40px;
 }
 
 #chat {
   width: 100%; /* O el ancho deseado */
   height: 100vh; /* Utiliza la altura completa de la ventana */
+  display: flex;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
 }
