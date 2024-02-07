@@ -46,15 +46,15 @@ function appendMessage(message, source) {
     } else {
         messageElement.classList.add('received-message');
     }
+
+    messageContainer.prepend(messageElement);
   
-   const allMessages = messageContainer.querySelectorAll('.message');
+    const allMessages = messageContainer.querySelectorAll('.message');
 
     // Verificar si ya hay más de dos mensajes
-    if (allMessages.length === 2) {
+    if (allMessages.length >= 2) {
         // Si hay más de dos mensajes, eliminar el más antiguo (el primero en la lista)
         messageContainer.removeChild(allMessages[0]);
     }
     
-    // Agregar el nuevo mensaje al principio del contenedor
-    messageContainer.prepend(messageElement);
 }
