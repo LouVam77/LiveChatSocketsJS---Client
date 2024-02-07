@@ -22,7 +22,7 @@
   width: 70%;
   list-style: none;
   padding: 25px;
-  margin: 0;
+  margin-top: 10%;
   justify-content: center; /* Centrar horizontalmente */
   flex-direction: column;
 }
@@ -47,7 +47,6 @@ input {
 #chat {
   width: 100%; /* O el ancho deseado */
   height: 100vh; /* Utiliza la altura completa de la ventana */
-  display: block;
   justify-content: center; /* Centra horizontalmente */
   align-items: center; /* Centra verticalmente */
 }
