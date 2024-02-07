@@ -9,7 +9,7 @@
     border-radius: 5px;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    margin-right: 50%;
+    float: left;
 }
 
 .received-message.show {
