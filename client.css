@@ -72,10 +72,8 @@ input {
 
 #partesuperior {
   background-color: rgba(0, 0, 0, 0.26);
-  margin-top: -8px;
-  margin-left: -10px;
-  margin-right: -10px;
-  width: 110%;
+  margin-bottom: 0;
+  width: 70%;
   height: 60px;
   color: blue;
   text-align: left;
