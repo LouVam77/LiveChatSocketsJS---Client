@@ -47,7 +47,7 @@ function appendMessage(message, source) {
         messageElement.classList.add('received-message');
     }
     
-    while (messageContainer.childNodes.length == 2{
+    while (messageContainer.childNodes.length == 2) {
         messageContainer.removeChild(messageContainer.firstChild);
     }
 
