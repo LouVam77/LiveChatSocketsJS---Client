@@ -48,7 +48,7 @@ function appendMessage(message, source) {
     }
     
     while (messageContainer.childNodes.length == 3) {
-        messageContainer.removeChild(messageContainer.firstChild);
+        messageContainer.removeChild(messageContainer.childNodes[-1]);
     }
 
     messageContainer.prepend(messageElement);
