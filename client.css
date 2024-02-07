@@ -19,6 +19,7 @@
 #message-container {
   background-color: blue;
   width: 90%;
+  height: 90%;
   list-style: none;
   padding: 10px;
   margin: auto;
@@ -30,7 +31,7 @@
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 10px;
-  display: block;
+  width: auto;
 }
 
 
