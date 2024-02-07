@@ -50,7 +50,7 @@ function appendMessage(message, source) {
    const allMessages = messageContainer.querySelectorAll('.message');
 
     // Verificar si ya hay más de dos mensajes
-    if (allMessages.length >= 2) {
+    if (allMessages.length === 2) {
         // Si hay más de dos mensajes, eliminar el más antiguo (el primero en la lista)
         messageContainer.removeChild(allMessages[0]);
     }
