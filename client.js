@@ -46,6 +46,10 @@ function appendMessage(message, source) {
     } else {
         messageElement.classList.add('received-message');
     }
+
+    setTimeout(() => {
+        messageElement.classList.add('show');
+   }, 100)
     
     while (messageContainer.childNodes.length == 3) {
         messageContainer.removeChild(messageContainer.childNodes[messageContainer.childNodes.length - 1]);
