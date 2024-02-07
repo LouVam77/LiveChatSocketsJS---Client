@@ -60,6 +60,7 @@ input {
   justify-content: center; /* Centrar horizontalmente */
   align-items: center; /* Centrar verticalmente */
   flex-direction: column;
+  margin: 0;
 }
 
 #partesuperior {
