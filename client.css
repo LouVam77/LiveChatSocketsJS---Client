@@ -17,21 +17,21 @@
 }
 
 #message-container {
-  background-color: blue;
-  width: 90%;
-  height: 90%;
-  list-style: none;
-  padding: 10px;
-  margin: auto;
-  display: inline-block;
+  width: 80%; /* O el ancho deseado */
+  height: 50%; /* O la altura deseada */
+  display: flex;
+  margin: 0;
+  flex-direction: column; /* Alinear los hijos uno debajo del otro */
 }
 
-#message-container div div {
+#message-container div {
   background-color: #f0f0f0;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 10px;
+  width: auto; /* Ajustar al contenido */
+  display: block; /* Cada div en una línea nueva */
 }
 
 
