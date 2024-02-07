@@ -1,6 +1,6 @@
 .sent-message {
   text-align: right;
-   margin-left: 50%;
+   margin-left: 80%;
 }
 
 .received-message {
@@ -8,10 +8,9 @@
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
-    max-width: 80%;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    margin-right: 50%
+    margin-right: 80%
 }
 
 .received-message.show {
@@ -23,7 +22,7 @@
   width: 70%;
   list-style: none;
   padding: 10px;
-  margin: 0 auto;
+  margin: auto;
   justify-content: center; /* Centrar horizontalmente */
   flex-direction: column;
 }
@@ -57,10 +56,6 @@ input {
 #message-form {
   width: 50%;
   justify-self: center;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-
 }
 
 #chat {
