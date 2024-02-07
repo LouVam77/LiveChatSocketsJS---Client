@@ -14,6 +14,7 @@
 
 .received-message.show {
     opacity: 1;
+    float: left;
 }
 
 #message-container {
