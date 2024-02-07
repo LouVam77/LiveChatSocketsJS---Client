@@ -46,9 +46,13 @@ function appendMessage(message, source) {
     } else {
         messageElement.classList.add('received-message');
     }
-     // Eliminar los mensajes anteriores
-    while (messageContainer.firstChild) {
-        messageContainer.removeChild(messageContainer.firstChild);
+  
+   const allMessages = messageContainer.querySelectorAll('.message');
+
+    // Verificar si ya hay más de dos mensajes
+    if (allMessages.length >= 2) {
+        // Si hay más de dos mensajes, eliminar el más antiguo (el primero en la lista)
+        messageContainer.removeChild(allMessages[0]);
     }
     
     // Agregar el nuevo mensaje al principio del contenedor
