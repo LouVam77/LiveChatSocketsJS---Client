@@ -1,6 +1,5 @@
 .sent-message {
-  text-align: right;
-   margin-left: 80%;
+  foat: right;
 }
 
 .received-message {
@@ -10,7 +9,7 @@
     border-radius: 5px;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    margin-right: 80%
+    foat: left;
 }
 
 .received-message.show {
@@ -21,8 +20,7 @@
   background-color: black;
   width: 70%;
   list-style: none;
-  padding: 25px;
-  margin-top: 10%;
+  padding: 5%;
   justify-content: center; /* Centrar horizontalmente */
   flex-direction: column;
 }
@@ -70,26 +68,27 @@ input {
   align-items: center; /* Centra verticalmente */
 }
 
+
 #partesuperior {
-  background-color: rgba(0, 0, 0, 0.26);
-  margin-bottom: -10%;
-  width: 83%;
-  height: 60px;
-  color: blue;
-  text-align: left;
-  display: flex;
-  align-items: center;
+    background-color: rgb(255 0 0 / 40%);
+    margin-bottom: -10%;
+    width: 81%;
+    height: 50px;
+    color: #713c45;
+    text-align: left;
+    display: flex;
+    align-items: center;
 }
 
 #privado, #fotonosotros {
   display: inline-block;
-  padding: 0;
   color: white;
 }
 
 #privado {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 20px;
+  padding-left: 10px;
 }
 
 
