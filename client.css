@@ -9,7 +9,7 @@
     border-radius: 5px;
     opacity: 0;
     transition: opacity 1s ease-in-out;
-    foat: left;
+    margin-right: 50%;
 }
 
 .received-message.show {
@@ -71,7 +71,6 @@ input {
 
 #partesuperior {
     background-color: rgb(255 0 0 / 40%);
-    margin-bottom: -10%;
     width: 81%;
     height: 50px;
     color: #713c45;
