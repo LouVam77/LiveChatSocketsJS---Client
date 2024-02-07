@@ -23,7 +23,8 @@
   list-style: none;
   padding: 10px;
   margin: auto;
-  display: block;
+  display: inline-block;
+  
 }
 
 #message-container div div {
@@ -32,8 +33,7 @@
   border-radius: 8px;
   padding: 10px;
   margin-bottom: 10px;
-  width: auto;
-  display: inline-block;
+  margin-rigth: 40%;
 }
 
 
