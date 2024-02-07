@@ -46,5 +46,11 @@ function appendMessage(message, source) {
     } else {
         messageElement.classList.add('received-message');
     }
-    messageContainer.appendChild(messageElement);
+     // Eliminar los mensajes anteriores
+    while (messageContainer.firstChild) {
+        messageContainer.removeChild(messageContainer.firstChild);
+    }
+    
+    // Agregar el nuevo mensaje al principio del contenedor
+    messageContainer.prepend(messageElement);
 }
