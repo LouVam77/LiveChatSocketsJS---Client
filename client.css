@@ -54,14 +54,21 @@ input {
     margin-top: 10px;
 }
 
-#chat {
-  width: 100%;
-  justify-content: center;
+#message-form {
+  width: 50%;
   justify-self: center;
   position: fixed;
   bottom: 0;
   right: 0;
 
+}
+
+#chat {
+  width: 100%; /* O el ancho deseado */
+  height: 100%; /* O la altura deseada */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  flex-direction: column;
 }
 
 #partesuperior {
